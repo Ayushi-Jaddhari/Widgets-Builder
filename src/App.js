@@ -1,23 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Accordion from "./components/Accordion";
+import DropDown from "./components/DropDown";
+import Search from "./components/Search";
+import Translate from "./components/Translate";
 
+const items = [
+  {
+    title: "What is React?",
+    content: "React is a front end javascript framework",
+  },
+  {
+    title: "Why React.js",
+    content: "Because Recat is very interesting and famous among Js community",
+  },
+  {
+    title: "Why to Use React.js",
+    content: "Because Recat is very interesting and famous among Js community",
+  },
+];
+const options = [
+  {
+    label: "Oooompp Red",
+    value: "red",
+  },
+  {
+    label: "Color Green",
+    value: "green",
+  },
+  {
+    label: "Sunny Orange",
+    value: "orange",
+  },
+];
 function App() {
+  // const [selected, setSelected] = useState(options[0]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Accordion items={items}/> */}
+      {/* <Search /> */}
+        {/* <DropDown
+          options={options}
+          selected={selected}
+          onSelectedChange={setSelected}
+          label="Select a Color"
+        /> */}
+      
+       <Translate />
     </div>
   );
 }
